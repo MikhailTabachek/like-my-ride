@@ -4,13 +4,30 @@
 </head>
 <body>
   <nav>
+    <a class="top-left" href="">Popular <br> Brands</a>
+    <a class="top-left" href="">Popular <br> Colors</a>
+    <a class="top-left" href="">Newest/<br> Oldest</a>
+    <a class="top-left" href="">For Sale</a>
+    <% if (user?.profile.avatar) { %>
+      <div>
+        <a class="google" href="/profiles/new">
+          <button id="logout" type="submit">Add Car</button>
+        </a>
+        </div>
+        <div>
+        <img class="avatar"
+          src="<%= user.profile.avatar %>"
+          alt="<%= user.profile.name %> avatar"
+        />
+      </div>
+    <% } %>
     <% if (user) { %>
-      <a href="/auth/logout">
-        <button type="submit">Logout</button>
+      <a class="google" href="/auth/logout">
+        <button id="logout" type="submit">Logout</button>
       </a>
     <% } else { %>
-      <a href="/auth/google" class="siwg-link">
-        <button type="submit" class="siwg">
+      <a class="google" href="/auth/google" class="siwg-link">
+        <button id="google-btn" type="submit" class="siwg">
           <img id="siwg-image" alt="Sign in with Google" />
         </button>
       </a>

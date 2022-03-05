@@ -2,15 +2,15 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img
-        src="<%= user.profile.avatar %>"
-        alt="<%= user.profile.name %> avatar"
-      />
-    </div>
-  <% } %>
+  <h1 class="animate__animated animate__fadeIn">Hello, <%= user ? user.profile.name : "stranger" %></h1>
+
+
+  <div class="container">
+    <p href="">
+        Hey, I'm Mike and I drive a Black Mercedes Benz CLS 63 AMG. It is 13 years old and it's a Great car. My Dream car is Mercedes Benz AMG GTs.<br>
+        My car is Not For Sale.
+    </p>
+  </div>
 </main>
 
 <%- include('./partials/footer') %>
