@@ -2,10 +2,13 @@ import { Router } from 'express'
 
 const router = Router()
 
-import * as carsCtrl from '../controllers/cars.js'
 import { isLoggedIn } from '../middleware/middleware.js'
 
-router.get('/cars/new', isLoggedIn, carsCtrl.index)
+import * as carsCtrl from '../controllers/cars.js'
+
+router.get('/new', isLoggedIn, carsCtrl.new)
+
+router.post('/', carsCtrl.create)
 
 // router.get('/', function (req, res) {
 //   res.render('index', { title: 'Like My Ride!', user: req.user ? req.user : null })

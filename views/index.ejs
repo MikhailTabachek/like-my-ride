@@ -14,7 +14,10 @@
 
 <div class="container">
     <ul>
-        <li>Hey, I'm <%= user.profile.name %> and I drive a ...</li>
+      <% if(user){ %> 
+        <li>Hey, I'm <%= user.profile.name %> and I drive a ...
+      <% } %>
+        </li>
     </ul>
 </div>
 
