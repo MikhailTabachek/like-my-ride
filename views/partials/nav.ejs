@@ -10,11 +10,11 @@
     <a class="top-left" href="">For Sale</a>
     <% if (user?.profile.avatar) { %>
       <div>
-        <a class="google" href="/profiles/new">
+        <a class="google" href="/cars/new">
           <button id="logout" type="submit">Add Car</button>
         </a>
-        </div>
-        <div>
+      </div>
+      <div>
         <img class="avatar"
           src="<%= user.profile.avatar %>"
           alt="<%= user.profile.name %> avatar"

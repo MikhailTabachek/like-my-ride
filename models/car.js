@@ -10,6 +10,9 @@ const ratingSchema = new Schema({
 })
 
 const carSchema = new Schema({
+  profile: { 
+    type: mongoose.Schema.Types.ObjectId, ref: 'Profile' },
+  
   brand:{
     type: String,
     require: true
@@ -21,7 +24,7 @@ const carSchema = new Schema({
   year:{
     type: Number,
     min: 1900,
-    max: Date.now().getFullYear(),
+    max: Date.now().getFullYear,
     require: true
   }, 
   color:{
