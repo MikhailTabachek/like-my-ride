@@ -29,11 +29,12 @@ function create(req,res){
     if(err) return res.redirect('/cars/new')
     res.redirect('/')
   })
-  console.log("Create!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+  console.log(car)
 }
 
 function show(req, res){
-  console.log('Show functionnnN!!!!')
+  console.log('Show functionnnN Works!!!!')
+  
 }
 
 export {
