@@ -1,0 +1,30 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1 class="animate__animated animate__fadeIn">Hello, <%= user ? user.profile.name : "stranger" %></h1>
+
+
+<div id="single-car" class="container">
+  <div>Make: </div>
+  <div><%= car.brand %></div>
+  <div>Model: </div>
+  <div><%= car.model %></div>
+  <div>Year: </div>
+  <div><%= car.year %></div>
+  <div>Color: </div>
+  <div><%= car.year %></div>
+  <div>For Sale: </div>
+  <div> <%= car.forSale ? "For Sale" : "Not For Sale"%></div>
+  <a class="google" href="/">
+    <button id="logout" type="submit">Delete</button>
+  </a>
+  <a class="google" href="">
+    <button id="logout" type="submit">Edit</button>
+  </a>
+</div>
+
+
+</main>
+
+<%- include('../partials/footer') %>

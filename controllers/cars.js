@@ -34,7 +34,13 @@ function create(req,res){
 
 function show(req, res){
   console.log('Show functionnnN Works!!!!')
-  
+  Car.findById(req.params.id, function (err, car){
+    res.render('cars/show', {
+      title: "Car Details",
+      car
+    })
+  })
+
 }
 
 export {
