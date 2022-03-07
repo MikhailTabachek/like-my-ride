@@ -12,7 +12,7 @@ const ratingSchema = new Schema({
 const carSchema = new Schema({
   profile: { 
     type: mongoose.Schema.Types.ObjectId, 
-    ref: 'Profile' },
+    ref: 'Profile'},
   
   brand:{
     type: String,
