@@ -14,6 +14,8 @@ router.get('/:id', isLoggedIn, carsCtrl.show)
 
 router.post('/',isLoggedIn, carsCtrl.create)
 
+router.delete('/:id', isLoggedIn, carsCtrl.delete)
+
 // router.get('/', function (req, res) {
 //   res.render('index', { title: 'Like My Ride!', user: req.user ? req.user : null })
 // })
