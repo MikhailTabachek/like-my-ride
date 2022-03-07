@@ -10,9 +10,6 @@ const ratingSchema = new Schema({
 })
 
 const carSchema = new Schema({
-  profile: { 
-    type: mongoose.Schema.Types.ObjectId, 
-    ref: 'Profile'},
   
   brand:{
     type: String,
@@ -33,6 +30,9 @@ const carSchema = new Schema({
     require: true
   },
   forSale: Boolean,
+  driver: { 
+    type: Schema.Types.ObjectId, 
+    ref: 'Profile'},
   like: Number,
   rating:[ratingSchema]
 }, {

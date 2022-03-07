@@ -22,22 +22,34 @@ function newCar(req,res){
 }
 
 function create(req,res){
-  req.body.owner = req.user.profile._id
+  req.body.driver = req.user.profile._id
   req.body.forSale = !!req.body.forSale
-  const car = new Car(req.body)
-  car.save(function(err){
-    if(err) return res.redirect('/cars/new')
+  Car.create(req.body)
+  .then(car => {
     res.redirect('/')
+    console.log(req.body)
   })
-  console.log(car)
+  .catch(err => {
+    console.log(err)
+    res.redirect('/cars/new')
+  })
+  // const car = new Car(req.body)
+  // car.save(function(err){
+  //   if(err) return res.redirect('/cars/new')
+  //   res.redirect('/')
+  // })
+  // console.log(car)
 }
 
 function show(req, res){
-  Car.findById(req.params.id, function (err, car){
+  Car.findById(req.params.id)
+  .populate('driver')
+  .then(car => {
     res.render('cars/show', {
       title: "Car Details",
       car
     })
+  // }), function (err, car){
   })
 }
 
