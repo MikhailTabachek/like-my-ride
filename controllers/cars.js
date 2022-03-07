@@ -3,11 +3,15 @@ import { User } from '../models/user.js'
 
 
 function index(req, res) {
-res.render('index', { title: 'Like My Ride!', user: req.user ? req.user : null })
-// Car.find({})
-// .then(cars => {
-//   cars
-// })
+  console.log('Index Function')
+  // Car.find({}, function(error, cars){
+  // res.render('index', {
+  //   title: 'Like My Ride!', 
+  //   user: req.user ? req.user : null, 
+  //   error,
+  //   cars
+  //   })
+  // })
 }
 
 function newCar(req,res){
@@ -17,20 +21,14 @@ function newCar(req,res){
 }
 
 function create(req,res){
+  console.log('Testing buttonnN!!!!')
   req.body.owner = req.user.profile._id
   req.body.forSale = !!req.body.forSale
-  Car.create(req.body)
-  .then(car => {
-    res.redirect('/')
-    // res.redirect(`/cars/${car._id}`)
+  const car = new Car(req.body)
+  car.save(function(err){
+    if(err) return res.redirect('/cars/new')
+    res.redirect('index')
   })
-  .catch(err =>{
-    res.redirect('/cars/new')
-  })
-  // car.save(function(err){
-  //   if(err) return res.redirect('/cars/new')
-    
-  // })
 }
 
 export {
