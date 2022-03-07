@@ -3,15 +3,16 @@ import { User } from '../models/user.js'
 
 
 function index(req, res) {
-  Car.find({}, function(error, cars){
+  Car.find({})
+  .populate('driver')
+  .then(car =>
     res.render('index', {
-      error,
-      cars,
+      car,
       title: 'Like My Ride!', 
-      user: req.user ? req.user : null 
+      user: req.user ? req.user : null
     })
-  })
-}
+  ) 
+    }
 
 // function index(req, res) {
 //   Car.find({}), function(error, cars){

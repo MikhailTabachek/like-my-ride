@@ -13,7 +13,7 @@
   </div>
 
 
-<% cars.forEach(car => { %> 
+<% car.forEach(car => { %> 
   <div class="container">
     <p> Hi, I'm <%= car.driver.name %>. I'm driving a <%= car.year %> <%=car.color%> <%= car.brand %> <%= car.model %>. It is <%= car.forSale ? 'For Sale' : 'Not for Sale' %> </li>
     </p>
