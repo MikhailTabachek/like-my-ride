@@ -6,11 +6,11 @@ import { isLoggedIn } from '../middleware/middleware.js'
 
 import * as carsCtrl from '../controllers/cars.js'
 
-router.get('/', isLoggedIn, carsCtrl.index)
+// router.get('/', isLoggedIn, carsCtrl.index)
 
 router.get('/new', isLoggedIn, carsCtrl.new)
 
-router.get('/:id', isLoggedIn, carsCtrl.show)
+router.get('/:id', carsCtrl.show)
 
 router.post('/',isLoggedIn, carsCtrl.create)
 

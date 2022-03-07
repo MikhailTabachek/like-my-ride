@@ -16,12 +16,14 @@
   <div><%= car.year %></div>
   <div>For Sale: </div>
   <div> <%= car.forSale ? "For Sale" : "Not For Sale"%></div>
-  <a class="google" href="/">
-    <button id="logout" type="submit">Delete</button>
-  </a>
+  <% if(user) { %> 
+    <form class="google" action="/cars/<%= car._id %>?_method=DELETE" method="POST">
+        <button  id="logout" type="submit">Delete</button>
+    </form>
   <a class="google" href="">
     <button id="logout" type="submit">Edit</button>
   </a>
+  <% } %> 
 </div>
 
 
