@@ -12,9 +12,13 @@
     </p>
   </div>
 
-<div class="container">
-  
-</div>
+
+<% cars.forEach(car => { %> 
+  <div class="container">
+        <p> Hi, I'm <%= car.profile%>. I'm driving a <%= car.year %> <%=car.color%> <%= car.brand %> <%= car.model %>. It is <%= car.forSale ? 'For Sale' : 'Not for Sale' %> </li>
+        </p>
+  </div>
+<% }) %>
 
 
 </main>

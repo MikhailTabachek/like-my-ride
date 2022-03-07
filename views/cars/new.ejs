@@ -4,8 +4,8 @@
 
 <main>
   <h1>Add new car</h1>
-<% if(user) { %>
-  <form action="/" method="POST">
+<!-- <% if(user) { %> -->
+  <form action="/cars" method="POST">
     <label> Make:
       <input type="text" name="brand" autocomplete="off">
     </label>
@@ -23,7 +23,7 @@
     </label>
     <button type="submit" >Add a car</button>
   </form>
-<% } %>
+<!-- <% } %> -->
 
 </main>
 <%- include('../partials/footer') %>

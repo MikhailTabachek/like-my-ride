@@ -3,25 +3,25 @@ import { User } from '../models/user.js'
 
 
 function index(req, res) {
-  console.log('Index Function')
-  // Car.find({}, function(error, cars){
-  // res.render('index', {
-  //   title: 'Like My Ride!', 
-  //   user: req.user ? req.user : null, 
-  //   error,
-  //   cars
-  //   })
-  // })
+  console.log('Index Function!!!!!!')
+  Car.find({}, function(error, cars){
+  res.render('cars/index', {
+    title: 'Like My Ride!', 
+    user: req.user ? req.user : null, 
+    error,
+    cars
+    })
+  })
 }
 
 function newCar(req,res){
+  console.log("newwww!!!!!!")
   res.render('cars/new', {
     title: "Add Car"
   })
 }
 
 function create(req,res){
-  console.log('Testing buttonnN!!!!')
   req.body.owner = req.user.profile._id
   req.body.forSale = !!req.body.forSale
   const car = new Car(req.body)
@@ -29,11 +29,17 @@ function create(req,res){
     if(err) return res.redirect('/cars/new')
     res.redirect('/')
   })
+  console.log("Create!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+}
+
+function show(req, res){
+  console.log('Show functionnnN!!!!')
 }
 
 export {
   index,
   newCar as new,
-  create
+  create,
+  show
 }
 
