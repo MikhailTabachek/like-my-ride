@@ -41,13 +41,6 @@ function deleteCar(req, res){
 }
 
 function edit(req, res){
-  // Car.findById(req.params.id, function(err, car) {
-  //   res.render('cars/edit', {
-  //     car,
-  //     err,
-  //     title: "Edit Your Car"
-  //   })
-  // })
   Car.findById(req.params.id)
   .then(car => {
     res.render('cars/edit', {

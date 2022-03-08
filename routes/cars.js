@@ -12,9 +12,11 @@ router.get('/new', isLoggedIn, carsCtrl.new)
 
 router.get('/:id', carsCtrl.show)
 
-router.get('/:id/edit', carsCtrl.edit)
+router.get('/:id/edit', isLoggedIn, carsCtrl.edit)
 
 router.post('/',isLoggedIn, carsCtrl.create)
+
+router.put('/:id', isLoggedIn, carsCtrl.update)
 
 router.delete('/:id', isLoggedIn, carsCtrl.delete)
 
