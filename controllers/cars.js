@@ -1,9 +1,9 @@
+import methodOverride from 'method-override'
 import { Car } from '../models/car.js'
 import { User } from '../models/user.js'
 
 
 function newCar(req,res){
-  console.log("newwww!!!!!!")
   res.render('cars/new', {
     title: "Add Car"
   })
@@ -40,10 +40,24 @@ function deleteCar(req, res){
   })
 }
 
+function edit(res, req){
+  methodOverride.findById(req.params.id)
+  .then(car => {
+    res.render('cars/edit', {
+      car,
+      title: "Edit your car"
+    })
+  })
+  .catch(err => {
+    res.redirect('/cars/:id')
+  })
+}
+
 export {
   newCar as new,
   create,
   show,
-  deleteCar as delete
+  deleteCar as delete,
+  edit
 }
 

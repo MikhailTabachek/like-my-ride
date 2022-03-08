@@ -13,14 +13,14 @@
   <div>Year: </div>
   <div><%= car.year %></div>
   <div>Color: </div>
-  <div><%= car.year %></div>
+  <div><%= car.color %></div>
   <div>For Sale: </div>
   <div> <%= car.forSale ? "For Sale" : "Not For Sale"%></div>
   <% if(user) { %> 
     <form class="google" action="/cars/<%= car._id %>?_method=DELETE" method="POST">
         <button  id="logout" type="submit">Delete</button>
     </form>
-  <a class="google" href="">
+  <a class="google" href="/cars/<%= car._id %>/edit">
     <button id="logout" type="submit">Edit</button>
   </a>
   <% } %> 
