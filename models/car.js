@@ -42,7 +42,8 @@ const carSchema = new Schema({
     required: true,
     default: "Good car"
   },
-  rating:[ratingSchema]
+  rating:[ratingSchema],
+  driverNote: String
 }, {
   timestamps: true
 })

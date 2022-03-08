@@ -8,12 +8,25 @@
 
 <div id="single-car" class="container">
   <div>I drive a <%= car.year %>, <%= car.color %> <%= car.brand %> <%= car.model %>. It's a <%= car.rating.feedback %> car. <br> Right not it's <%= car.forSale ? "for sale" : "not for sale"%>. <br> My dream car is - <%= car.dream %> <br>
-  <div class="reviews-text">
-      <label for="driver-review">Write your comment here:</label>
-      <textarea name="comment" id="driver-review"></textarea>
+  <div> Comments <br>
+
+  </div>
+  <br>
+  <% if(user) { %>
+  <form action="/cars/<%= car._id %>?_method=PUT" method="POST">
+    <div class="comments-text">
+      <label for="user-comments">Write your comment here:</label>
+      <textarea name="comment" id="user-comments"></textarea>
       <button>Comment</button>
   </div>
+  
+    <a class="google" href="">
+      <button id="" type="submit">Like!</button>
+    </a>
+  </form>
+  <% } %>
 </div>
+
 <% if(user) {%> 
   <% if (car.driver.equals(user.profile._id)) { %> 
     <form class="google" action="/cars/<%= car._id %>?_method=DELETE" method="POST">
@@ -23,12 +36,7 @@
     <button id="logout" type="submit">Edit</button>
   </a>
   <% } else { %> 
-  <form action="/cars/<%= car._id %>?_method=PUT" method="POST">
-    <a class="google" href="">
-      <button id="" type="submit">Like!</button>
-    </a>
-    <label for="comment-input">Leave your comment here!</label>
-      <input type="text" name="comment" id="comment-input">
+
   <% }} %> 
 </div>
 
