@@ -7,7 +7,7 @@
 
 
 <div id="single-car" class="container">
-  <div>I drive a <%= car.year %>, <%= car.color %> <%= car.brand %> <%= car.model %>. It's a ... car. <br> Right not it's <%= car.forSale ? "for sale" : "not for sale"%>. <br> I also have a dream car, and it is a "Dream car".
+  <div>I drive a <%= car.year %>, <%= car.color %> <%= car.brand %> <%= car.model %>. It's a .... car. <br> Right not it's <%= car.forSale ? "for sale" : "not for sale"%>. <br> My dream car is - <%= car.dream %>
 </div>
 <% if(user) {%> 
   <% if (car.driver.equals(user.profile._id)) { %> 

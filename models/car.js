@@ -29,6 +29,10 @@ const carSchema = new Schema({
     type: String,
     require: true
   },
+  dream: {
+    type: String,
+    default: "I actually don't have one yet :("
+  },
   forSale: Boolean,
   driver: { 
     type: Schema.Types.ObjectId, 
