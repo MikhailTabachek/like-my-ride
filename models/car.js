@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 
 const ratingSchema = new Schema({
   comment: String,
-  rating: String
+  like: {type: Number, default: 0}
 }, {
   timestamps: true
 })
@@ -37,7 +37,11 @@ const carSchema = new Schema({
   driver: { 
     type: Schema.Types.ObjectId, 
     ref: 'Profile'},
-  like: Number,
+  feedback:{
+    type: String,
+    required: true,
+    default: "Good car"
+  },
   rating:[ratingSchema]
 }, {
   timestamps: true

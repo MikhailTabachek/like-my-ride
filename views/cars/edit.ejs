@@ -17,6 +17,14 @@
     <input type="text" name="color" value="<%= car.color %>" id="color-input">
     <label for="dream-input">Dream Car: </label>
     <input type="text" name="dream" value="<%= car.dream %>" id="dream-input">
+    <label for="feedback-select"> Rate your car: </label>
+    <select name="feedback" id="feedback-select">
+      <option value="<%= car.rating  %>"><%= car.rating  %></option>
+      <option value="Great car!">Great Car</option>
+      <option value="Good car">Good Car</option>
+      <option value="Ok car">Ok car</option>
+      <option value="Bad car">Bad car</option>
+    </select>
     <label for="for-sale">For Sale: </label>
     <input type="checkbox" name="forSale"
     <%= car.forSale ? 'checked' : ""  %> id="for-sale"> 
