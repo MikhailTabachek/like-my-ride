@@ -1,0 +1,28 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1 class="animate__animated animate__fadeIn"><%= user %>, you can edit your car here!</h1>
+
+
+<div id="single-car" class="container">
+  <form action="/cars/<%= car._id %>?_method=PUT" method="POST">
+    <label for="make-input">Make: </label>
+    <input type="text" name="brand" value="<%= car.brand %>" id="make-input">
+    <label for="model-input">Model: </label>
+    <input type="text" name="model" value="<%= car.model %>" id="model-input">
+    <label for="year-input">Year: </label>
+    <input type="text" name="year" value="<%= car.year %>" id="year-input">
+    <label for="color-input">Color: </label>
+    <input type="text" name="color" value="<%= car.color %>" id="color-input">
+    <label for="for-sale">For Sale: </label>
+    <input type="checkbox" name="forSale"
+    <%= car.forSale ? 'checked' : ""  %> id="for-sale"> 
+  <div> <%= car.forSale ? "For Sale" : "Not For Sale"%></div>
+  <button  id="logout" type="submit">Submit</button>
+</div>
+</form>
+
+</main>
+
+<%- include('../partials/footer') %>
