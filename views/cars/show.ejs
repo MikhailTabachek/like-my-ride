@@ -3,27 +3,28 @@
 
 <main>
   <h1 class="animate__animated animate__fadeIn">Hello, <%= user ? user.profile.name : "stranger" %></h1>
+  <h2 class="animate__animated animate__fadeIn">Like my car? Leave a comment and hit the like button 😉</h2>
 
 
 <div id="single-car" class="container">
-  <div>Make: </div>
-  <div><%= car.brand %></div>
-  <div>Model: </div>
-  <div><%= car.model %></div>
-  <div>Year: </div>
-  <div><%= car.year %></div>
-  <div>Color: </div>
-  <div><%= car.color %></div>
-  <div>For Sale: </div>
-  <div> <%= car.forSale ? "For Sale" : "Not For Sale"%></div>
-  <% if(user) { %> 
+  <div>I drive a <%= car.year %>, <%= car.color %> <%= car.brand %> <%= car.model %>. It's a ... car. <br> Right not it's <%= car.forSale ? "for sale" : "not for sale"%>. <br> I also have a dream car, and it is a "Dream car".
+</div>
+<% if(user) {%> 
+  <% if (car.driver.equals(user.profile._id)) { %> 
     <form class="google" action="/cars/<%= car._id %>?_method=DELETE" method="POST">
         <button  id="logout" type="submit">Delete</button>
     </form>
   <a class="google" href="/cars/<%= car._id %>/edit">
     <button id="logout" type="submit">Edit</button>
   </a>
-  <% } %> 
+  <% } else { %> 
+  <form action="/cars/<%= car._id %>?_method=PUT" method="POST">
+    <a class="google" href="">
+      <button id="" type="submit">Like!</button>
+    </a>
+    <label for="comment-input">Leave your comment here!</label>
+      <input type="text" name="comment" id="comment-input">
+  <% }} %> 
 </div>
 
 

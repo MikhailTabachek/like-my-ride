@@ -15,7 +15,7 @@
 
 <% car.forEach(car => { %> 
   <div class="container">
-    <p> Hi, I'm <%= car.driver.name %>. I'm driving a <%= car.year %> <%=car.color%> <%= car.brand %> <%= car.model %>. It is <%= car.forSale ? 'For Sale' : 'Not for Sale' %> </li>
+    <p> Hey, I'm <%= car.driver.name %> and I drive a <%= car.year %> <%= car.brand %> <%= car.model %>. The color is <%=car.color%>. It's a ... car and right now it's <%= car.forSale ? 'For Sale.' : 'Not for Sale.' %> </li>
     </p>
     <a class="google" href="/cars/<%= car._id %>">
       <button id="logout" type="submit">View Details</button>

@@ -43,13 +43,17 @@ function deleteCar(req, res){
 function edit(req, res){
   Car.findById(req.params.id)
   .then(car => {
-    res.render('cars/edit', {
-      car,
-      title: "Edit your car"
-    })
+    if (car.driver.equals(req.user.profile._id)){
+      res.render('cars/edit', {
+        car,
+        title: "Edit your car"
+        })
+      } else {
+        alert(" You cant edit this post")
+    }
   })
   .catch(err => {
-    res.redirect('/cars/:id')
+    res.redirect('/')
   })
 }
 
@@ -67,7 +71,7 @@ Car.findById(req.params.id)
 }
 })
 .catch(err => {
-  res.redirect("/cars")
+  res.redirect("/")
 })
 }
 
