@@ -14,6 +14,8 @@ router.get('/:id', carsCtrl.show)
 
 router.get('/:id/edit', isLoggedIn, carsCtrl.edit)
 
+router.get('/:id/reviews', carsCtrl.reviews)
+
 router.post('/',isLoggedIn, carsCtrl.create)
 
 router.put('/:id', isLoggedIn, carsCtrl.update)
