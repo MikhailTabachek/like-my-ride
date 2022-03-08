@@ -9,8 +9,9 @@
 <div id="single-car" class="container">
   <div>I drive a <%= car.year %>, <%= car.color %> <%= car.brand %> <%= car.model %>. It's a <%= car.rating.feedback %> car. <br> Right not it's <%= car.forSale ? "for sale" : "not for sale"%>. <br> My dream car is - <%= car.dream %> <br>
   <div class="reviews-text">
-      <label for="driver-review">Tell more about your ride:</label>
+      <label for="driver-review">Write your comment here:</label>
       <textarea name="comment" id="driver-review"></textarea>
+      <button>Comment</button>
   </div>
 </div>
 <% if(user) {%> 
