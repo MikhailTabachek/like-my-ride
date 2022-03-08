@@ -53,11 +53,30 @@ function edit(req, res){
   })
 }
 
+function update(req, res){
+Car.findById(req.params.id)
+.then(car => {
+  if (car.driver.equals(req.user.profile._id)) {
+    req.body.forSale = !!req.body.forSale
+    car.updateOne(req.body, {new: true})
+    .then(() => {
+      res.redirect(`/cars/${car._id}`)
+  })
+} else {
+  throw new Error (" You cant edit this post")
+}
+})
+.catch(err => {
+  res.redirect("/cars")
+})
+}
+
 export {
   newCar as new,
   create,
   show,
   deleteCar as delete,
-  edit
+  edit,
+  update
 }
 
