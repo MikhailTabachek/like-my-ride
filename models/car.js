@@ -4,7 +4,8 @@ const Schema = mongoose.Schema
 
 const ratingSchema = new Schema({
   comment: String,
-  like: {type: Number, default: 0}
+  like: {type: Number, default: 0},
+  commentBy: String
 }, {
   timestamps: true
 })

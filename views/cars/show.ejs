@@ -15,7 +15,8 @@
     <form>
     <ul>
       <% car.rating.forEach(newComment => { %>
-        <li><%= newComment.comment %></li>
+        <li> <% newComment.profile %> said: <%= newComment.comment %>
+        </li>
       <% }) %> 
     </ul>
   </form>

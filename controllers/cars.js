@@ -76,7 +76,6 @@ Car.findById(req.params.id)
 }
 
 function addReviews (req, res) {
-  console.log("Alll worrrkeeddd!!!!!!!!");
   Car.findById(req.params.id, function(err, car){
     car.rating.push(req.body)
     car.save(err => {
