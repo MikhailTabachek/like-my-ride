@@ -76,6 +76,7 @@ Car.findById(req.params.id)
 }
 
 function addReviews (req, res) {
+  req.body.commentBy = req.user.profile.name
   Car.findById(req.params.id, function(err, car){
     car.rating.push(req.body)
     car.save(err => {

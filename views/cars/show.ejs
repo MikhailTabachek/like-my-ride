@@ -12,14 +12,17 @@
       <p><%= car.driverNote %></p>
     </div>
   <div class="comments"> Comments <br>
-    <form>
+    <!-- <form> -->
     <ul>
       <% car.rating.forEach(newComment => { %>
-        <li> <% newComment.profile %> said: <%= newComment.comment %>
+        <li> <%= newComment.commentBy %> says: <%= newComment.comment %>
         </li>
+        <form action="/cars/<%newComment._id%>?_method=DELETE" method="POST">
+          <button type="submit">Delete comment</button>
+        </form>
       <% }) %> 
     </ul>
-  </form>
+  <!-- </form> -->
     0 people like this car
   </div>
   <br>
@@ -33,9 +36,6 @@
     <br>
     <button type="submit">Comment</button>
   
-    <!-- <a class="google" href=""> -->
-      <!-- <button id="logout" type="submit">Like my Ride!</button> -->
-    <!-- </a> -->
   </form>
   <% } %>
 </div>
