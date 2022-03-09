@@ -17,8 +17,8 @@
       <% car.rating.forEach(newComment => { %>
         <li> <%= newComment.commentBy %> says: <%= newComment.comment %>
         </li>
-        <form action="/cars/<%newComment._id%>?_method=DELETE" method="POST">
-          <button type="submit">Delete comment</button>
+        <form action="/cars/<%= car._id %>/rating/<%=newComment._id%>?_method=DELETE" method="POST">
+          <button type="submit">Delete your comment</button>
         </form>
       <% }) %> 
     </ul>
