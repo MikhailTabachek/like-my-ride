@@ -11,24 +11,30 @@
     <div class="driver-fedback"> Few words from <%= car.driver.name %> about this car:
       <p><%= car.driverNote %></p>
     </div>
-  <div class="likes"> Comments <br>
+  <div class="comments"> Comments <br>
+    <form>
+    <ul>
+      <% car.rating.forEach(newComment => { %>
+        <li><%= newComment.comment %></li>
+      <% }) %> 
+    </ul>
+  </form>
     0 people like this car
   </div>
-  <div></div>
   <br>
   <% if(user) { %>
-  <form action="/cars/<%= car._id %>?_method=PUT" method="POST">
-    <div class="comments-text">
-      <label for="user-comments">Write your comment here:</label>
-      <br>
-      <textarea name="comment" id="user-comments"></textarea>
-      <br>
-      <button>Comment</button>
-  </div>
+  <form id="add-comment"
+  action="/cars/<%= car._id %>/rating"
+  method="POST">
+    <label for="user-comments">Write your comment here:</label>
+    <br>
+    <textarea name="comment" id="user-comments"></textarea>
+    <br>
+    <button type="submit">Comment</button>
   
-    <a class="google" href="">
-      <button id="logout" type="submit">Like my Ride!</button>
-    </a>
+    <!-- <a class="google" href=""> -->
+      <!-- <button id="logout" type="submit">Like my Ride!</button> -->
+    <!-- </a> -->
   </form>
   <% } %>
 </div>

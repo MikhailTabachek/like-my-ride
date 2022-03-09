@@ -75,12 +75,23 @@ Car.findById(req.params.id)
 })
 }
 
+function addReviews (req, res) {
+  console.log("Alll worrrkeeddd!!!!!!!!");
+  Car.findById(req.params.id, function(err, car){
+    car.rating.push(req.body)
+    car.save(err => {
+      res.redirect(`/cars/${car._id}`)
+    })
+  })
+}
+
 export {
   newCar as new,
   create,
   show,
   deleteCar as delete,
   edit,
-  update
+  update,
+  addReviews
 }
 
