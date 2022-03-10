@@ -87,7 +87,20 @@ function addReviews (req, res) {
 }
 
 function deleteReview (req, res){
-  console.log("TessttttttiiinnggGG!!!");
+  Car.findById(req.params.id, function(err, car){
+    const ratings = car.rating
+    let index = 0
+    ratings.forEach(rating => {
+      if(rating._id.toString() === req.params.ratingId){
+        index = ratings.indexOf(rating)
+      }
+    })
+    ratings.splice(index, 1)
+    car.rating = ratings
+    car.save(err => {
+      res.redirect(`/cars/${car._id}`)
+    })
+  })
 }
 
 export {

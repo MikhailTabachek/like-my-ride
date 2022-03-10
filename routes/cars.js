@@ -22,7 +22,7 @@ router.put('/:id', isLoggedIn, carsCtrl.update)
 
 router.delete('/:id', isLoggedIn, carsCtrl.delete)
 
-router.delete('/:id/rating/:id', carsCtrl.deleteReview)
+router.delete('/:id/rating/:ratingId', carsCtrl.deleteReview)
 
 // router.get('/', function (req, res) {
 //   res.render('index', { title: 'Like My Ride!', user: req.user ? req.user : null })
