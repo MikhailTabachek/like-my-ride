@@ -1,3 +1,22 @@
+body{
+  /* background-image: url('/images/background/BVi34co.jpg'); */
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwallup.net%2Fwp-content%2Fuploads%2F2016%2F05%2F25%2F320213-texture-carbon_fiber.jpg');
+  background-size: cover;
+  /* filter:opacity(50%); */
+
+
+}
+
+h1{
+  background-color:aliceblue;
+  padding: 1%;
+  color: #921313;
+  transition: .3s;
+  border-radius: 5px;
+  width: 70%;
+  text-align: center;
+}
+
 main{
   display: flex;
   justify-content: center;
@@ -8,14 +27,28 @@ main{
 }
 
 form{
+  font-size: 30px;
+  padding: 20px;
+  width: 70%;
+  height: auto;
+  background-color: #181818;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: .3s;
+  border-radius: 10px;
+}
+
+label{
+  padding: 12px 5px;
+  text-align: center;
+
 }
 
 input {
-  margin-top: 10px;
+  /* margin-top: 10px; */
+  padding: 8px;
 }
 
 button{
