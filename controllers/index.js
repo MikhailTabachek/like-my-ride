@@ -14,17 +14,6 @@ function index(req, res) {
   ) 
     }
 
-// function index(req, res) {
-//   Car.find({}), function(error, cars){
-//     res.render('index', {
-//       error,
-//       cars,
-//       title: 'Like My Ride!', 
-//       user: req.user ? req.user : null 
-//     })
-//   })
-// }
-
 export {
   index
 }

@@ -7,6 +7,9 @@ const ratingSchema = new Schema({
   like: {type: Number, default: 0},
   commentBy: String,
   commentById: String
+  // createdBy:{ 
+  //   type: Schema.Types.ObjectId, 
+  //   ref: 'Profile'},
 }, {
   timestamps: true
 })
