@@ -51,6 +51,8 @@ input {
   /* margin-top: 10px; */
   padding: 8px;
   border-radius: 5px;
+  font-family: 'Quicksand', Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
 }
 
 button{
@@ -71,14 +73,18 @@ button{
   text-align: left;
   padding: 8px;
   border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .add-edit-car{
   margin: 0;
-  height: 30px;
+  font-weight: 600;
+  height: auto;
+  width: auto;
   padding: 5px;
   font-family: 'Quicksand','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   color: black;
   background-color: #ffffff;
   border: 2px solid #30292F;

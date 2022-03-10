@@ -1,14 +1,17 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/cars/show.css"/>
 <%- include('../partials/nav') %>
 
 <main>
   <h1 class="animate__animated animate__fadeIn">Hello, <%= user ? user.profile.name : "stranger" %></h1>
-  <h2 class="animate__animated animate__fadeIn">Like my car? Leave a comment and hit the like button 😉</h2>
+  <h2 class="animate__animated animate__fadeIn">Like my car? Leave a comment about it😉</h2>
 
 
-<div id="single-car" class="container">
-  <div>I drive a <%= car.year %>, <%= car.color %> <%= car.brand %> <%= car.model %>. It's a <%= car.feedback %>. <br> Right not it's <%= car.forSale ? "for sale" : "not for sale"%>. <br> My dream car is - <%= car.dream %>
-    <div class="driver-fedback"> Few words from <%= car.driver.name %> about this car:
+<div class="container">
+  <div>I drive a <%= car.year %>, <%= car.color %> <%= car.brand %> <%= car.model %>. <br> It's a <%= car.feedback %> and right not it's <%= car.forSale ? "for sale" : "not for sale"%>. <br> My dream car is - <%= car.dream %>
+    <br>
+    <br>
+    <div class="driver-feedback"> Few words from <%= car.driver.name %> about this car:
       <p><%= car.driverNote %></p>
     </div>
   <div class="comments"> Comments <br>

@@ -1,0 +1,28 @@
+.container {
+  padding-top: 3%;
+  line-height: 1.5;
+}
+
+h1{
+  margin-bottom: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.driver-feedback{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+p{
+  text-align: center;
+  margin: 15px 30%;
+  font-family: 'Lobster Two', cursive;
+  border: 1px solid black;
+  width: auto;
+  border-radius: 5px;
+  background-color: rgba(224, 228, 187, 0.5);
+}

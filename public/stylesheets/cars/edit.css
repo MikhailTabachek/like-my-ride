@@ -1,0 +1,93 @@
+body{
+  /* background-image: url('/images/background/BVi34co.jpg'); */
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwallup.net%2Fwp-content%2Fuploads%2F2016%2F05%2F25%2F320213-texture-carbon_fiber.jpg');
+  background-size: cover;
+  /* filter:opacity(50%); */
+
+
+}
+
+h1{
+  background-color:rgb(46, 50, 54);
+  padding: 1%;
+  color: #FCFCFC;
+  transition: .3s;
+  border-radius: 5px;
+  width: 70%;
+  text-align: center;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color:aliceblue;
+}
+
+form{
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapertag.com%2Fwallpaper%2Ffull%2F2%2Fa%2Ff%2F426789-free-download-red-and-black-abstract-backgrounds-2560x1440.jpg');
+  font-size: 30px;
+  padding: 20px;
+  width: 70%;
+  height: auto;
+  background-color: #181818;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: .3s;
+  border-radius: 10px;
+}
+
+label{
+  padding: 12px 5px;
+  text-align: center;
+
+}
+
+input {
+  /* margin-top: 10px; */
+  padding: 8px;
+  border-radius: 5px;
+  font-family: 'Quicksand', Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+button{
+  font-size: 20px;
+}
+
+#feedback-select{
+  font-family: 'Quicksand', Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+#owner-review{
+  font-family: 'Quicksand', Georgia, 'Times New Roman', Times, serif;
+  width: auto;
+  height: 10vh;
+  text-align: left;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.add-edit-car{
+  margin: 0;
+  font-weight: 600;
+  height: auto;
+  width: auto;
+  padding: 5px;
+  font-family: 'Quicksand','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  color: black;
+  background-color: #ffffff;
+  border: 2px solid #30292F;
+  border-radius: 4px;
+  text-align: center;
+}
