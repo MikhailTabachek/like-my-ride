@@ -8,9 +8,9 @@ body{
 }
 
 h1{
-  background-color:aliceblue;
+  background-color:rgb(46, 50, 54);
   padding: 1%;
-  color: #921313;
+  color: #FCFCFC;
   transition: .3s;
   border-radius: 5px;
   width: 70%;
@@ -19,14 +19,15 @@ h1{
 
 main{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   font-size: 20px;
   color:aliceblue;
 }
 
 form{
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapertag.com%2Fwallpaper%2Ffull%2F2%2Fa%2Ff%2F426789-free-download-red-and-black-abstract-backgrounds-2560x1440.jpg');
   font-size: 30px;
   padding: 20px;
   width: 70%;
@@ -49,9 +50,38 @@ label{
 input {
   /* margin-top: 10px; */
   padding: 8px;
+  border-radius: 5px;
 }
 
 button{
   font-size: 20px;
-  margin-top: 10%;
+}
+
+#feedback-select{
+  font-family: 'Quicksand', Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+#owner-review{
+  font-family: 'Quicksand', Georgia, 'Times New Roman', Times, serif;
+  width: auto;
+  height: 10vh;
+  text-align: left;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.add-edit-car{
+  margin: 0;
+  height: 30px;
+  padding: 5px;
+  font-family: 'Quicksand','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  color: black;
+  background-color: #ffffff;
+  border: 2px solid #30292F;
+  border-radius: 4px;
+  text-align: center;
 }

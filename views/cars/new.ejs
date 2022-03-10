@@ -8,21 +8,26 @@
 <!-- <% if(user) { %> -->
   <form action="/cars" method="POST">
     <label> Make:
+      <br>
       <input type="text" name="brand" autocomplete="off">
     </label>
     <label> Model:
+      <br>
       <input type="text" name="model" autocomplete="off">
     </label>
     <label> Year:
+      <br>
       <input type="text" name="year" autocomplete="off">
     </label>
     <label> Color:
+      <br>
       <input type="text" name="color" autocomplete="off">
     </label>
     <label> For Sale:
       <input type="checkbox" name="forSale">
     </label>
     <label> Your Dream car:
+      <br>
       <input type="text" name="dream">
     </label>
     <label for="feedback-select"> Rate your car: </label>
@@ -33,9 +38,12 @@
       <option value="Bad car">Bad car</option>
     </select>
     <label> Few words about your ride:
-      <input type="text" name="driverNote">
+    <br>
+    <br>
+      <textarea id="owner-review" type="text" name="driverNote" cols="30" rows="10"></textarea>
+      <!-- <input id="owner-review" type="text" name="driverNote"> -->
     </label>
-    <button type="submit" >Add a car</button>
+    <button class="add-edit-car" type="submit" >Add a car</button>
   </form>
 <!-- <% } %> -->
 </main>
