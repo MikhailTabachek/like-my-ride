@@ -1,7 +1,10 @@
 html {
   box-sizing: border-box;
   background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwallup.net%2Fwp-content%2Fuploads%2F2016%2F05%2F25%2F320213-texture-carbon_fiber.jpg');
-  background-repeat: repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;  
 }
 
 /* The Universal Selector */
