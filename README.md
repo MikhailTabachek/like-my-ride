@@ -44,7 +44,7 @@ Credits:
 
 What I've learned after I built this website:
 
-* Console log and test everything, bedore and after building functionality
+* Console log and test everything, before and after building functionality
 * Ask people for help when problem takes a lot of time to fix
 * Take brakes to stay productive
 * Follow 5 steps when building RESTful routes
