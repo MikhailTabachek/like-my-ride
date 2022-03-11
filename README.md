@@ -1,6 +1,6 @@
 **Like My Ride**
 
-![](https://imgur.com/ogUyejo.png)
+![](https://imgur.com/navzN16.png)
 
 Click **[here](https://like-my-ride.herokuapp.com)** here to visit the page.
 
