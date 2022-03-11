@@ -225,5 +225,9 @@ border-radius: 5px;
     width: auto;
   }
 
+  #add-car {
+    font-size: medium;
+  }
+
 
 }
