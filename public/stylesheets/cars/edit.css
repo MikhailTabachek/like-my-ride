@@ -73,3 +73,32 @@ button{
   font-weight: 600;
 }
 
+
+@media only screen and (max-width: 768px){
+  p, li{
+    width: auto;
+    margin: 10px 10px;
+    font-size: auto;
+    color: #921018;
+  }
+
+  .container {
+    width: auto;
+    display: flexbox;
+    flex-direction: column;
+
+  }
+
+  .google{
+    display:flex;
+    float:none;
+    justify-content:center;
+    /* align-items:flex-start; */
+    margin: 10px 0 10px 0
+  }
+
+  textarea#owner-review{
+    font-size: large;
+  }
+
+}

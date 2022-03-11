@@ -10,6 +10,8 @@ import * as carsCtrl from '../controllers/cars.js'
 
 router.get('/new', isLoggedIn, carsCtrl.new)
 
+router.get('/sorted', carsCtrl.sorted)
+
 router.get('/:id', carsCtrl.show)
 
 router.get('/:id/edit', isLoggedIn, carsCtrl.edit)

@@ -103,6 +103,12 @@ function deleteReview (req, res){
   })
 }
 
+function sorted(req,res){
+  res.render('cars/sorted', {
+    title: "Like my Ride"
+  })
+}
+
 export {
   newCar as new,
   create,
@@ -111,6 +117,7 @@ export {
   edit,
   update,
   addReviews,
-  deleteReview
+  deleteReview,
+  sorted
 }
 

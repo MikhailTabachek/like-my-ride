@@ -95,3 +95,28 @@ p, li{
   box-shadow: 1px 1px 6px #1e86db;
   border: 1px solid #1e86db;
 }
+
+@media only screen and (max-width: 768px){
+  p, li{
+    width: auto;
+    margin: 10px 10px;
+    font-size: auto;
+    color: #921018;
+  }
+
+  .container {
+    width: auto;
+    display: flexbox;
+    flex-direction: column;
+
+  }
+
+  .google{
+    display:flex;
+    float:none;
+    justify-content:center;
+    /* align-items:flex-start; */
+    margin: 10px 0 10px 0
+  }
+
+}
