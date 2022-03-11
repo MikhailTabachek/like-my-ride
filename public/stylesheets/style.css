@@ -229,5 +229,9 @@ border-radius: 5px;
     font-size: medium;
   }
 
+  img.avatar{
+    margin: 0 5px 0 5px;
+  }
+
 
 }
