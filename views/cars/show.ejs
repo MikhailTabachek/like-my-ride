@@ -18,12 +18,13 @@
     <!-- <form> -->
     <ul>
       <% car.rating.forEach(newComment => { %>
-        <li> <%= newComment.commentBy %> says: <%= newComment.comment %>
+        <li><%= newComment.commentBy %> says:
+          <br> <%= newComment.comment %>
         </li>
         <% if(user) {%> 
       <% if(newComment.commentById == user.profile._id) {%> 
         <form action="/cars/<%= car._id %>/rating/<%=newComment._id%>?_method=DELETE" method="POST">
-          <button type="submit">Delete your comment</button>
+          <button id="delete-add-comment" type="submit">Delete your comment</button>
         </form>
         <% } %> 
         <% } %> 
@@ -41,7 +42,7 @@
     <br>
     <textarea name="comment" id="user-comments"></textarea>
     <br>
-    <button type="submit">Comment</button>
+    <button class="add-comment" type="submit">Comment</button>
   
   </form>
   <% } %>
