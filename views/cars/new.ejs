@@ -9,19 +9,19 @@
   <form action="/cars" method="POST">
     <label> Make:
       <br>
-      <input type="text" name="brand" autocomplete="off">
+      <input type="text" name="brand" autocomplete="off" placeholder="Ex. 'Honda'">
     </label>
     <label> Model:
       <br>
-      <input type="text" name="model" autocomplete="off">
+      <input type="text" name="model" autocomplete="off" placeholder="Ex. 'Accord'">
     </label>
     <label> Year:
       <br>
-      <input type="text" name="year" autocomplete="off">
+      <input type="text" name="year" autocomplete="off" placeholder="Ex. 2020">
     </label>
     <label> Color:
       <br>
-      <input type="text" name="color" autocomplete="off">
+      <input type="text" name="color" autocomplete="off" placeholder="Ex. 'Red'">
     </label>
     <label> For Sale:
       <input type="checkbox" name="forSale">
@@ -40,7 +40,7 @@
     <label> Few words about your ride:
     <br>
     <br>
-      <textarea id="owner-review" type="text" name="driverNote" cols="30" rows="10"></textarea>
+      <textarea id="owner-review" type="text" name="driverNote" cols="30" rows="10" placeholder="Required field. Short story about your car and why do you like it!"></textarea>
     </label>
     <button class="add-edit-car" type="submit" >Add a car</button>
   </form>

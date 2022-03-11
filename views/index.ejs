@@ -2,7 +2,8 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1 class="animate__animated animate__fadeIn">Hello, <%= user ? user.profile.name : "stranger" %></h1>
+  <h1 class="animate__animated animate__fadeIn">Hello, <%= user ? user.profile.name : "driver!" %></h1>
+  <h2 class="animate__animated animate__fadeIn">Please login to add a car or leave comments.</h2>
 
 <% car.forEach(car => { %> 
   <div class="container">
