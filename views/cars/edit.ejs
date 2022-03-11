@@ -1,25 +1,29 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/cars/edit.css"/>
 <%- include('../partials/nav') %>
-
+<div class="background">
 <main>
   <h1 class="animate__animated animate__fadeIn"><%= user.profile.name %>, you can edit your car here!</h1>
 
-
-<div id="single-car" class="container">
   <form action="/cars/<%= car._id %>?_method=PUT" method="POST">
     <label for="make-input">Make: </label>
+    <br>
     <input type="text" name="brand" value="<%= car.brand %>" id="make-input">
     <label for="model-input">Model: </label>
+    <br>
     <input type="text" name="model" value="<%= car.model %>" id="model-input">
     <label for="year-input">Year: </label>
+    <br>
     <input type="text" name="year" value="<%= car.year %>" id="year-input">
     <label for="color-input">Color: </label>
+    <br>
     <input type="text" name="color" value="<%= car.color %>" id="color-input">
     <label for="dream-input">Dream Car: </label>
+    <br>
     <input type="text" name="dream" value="<%= car.dream %>" id="dream-input">
     <label for="feedback-select"> Rate your car: </label>
+    <br>
     <select name="feedback" id="feedback-select">
-      <!-- <option value="<%= car.dream %>"><%= car.dream %></option> -->
       <option value="Great car">Great Car</option>
       <option value="Good car">Good Car</option>
       <option value="Ok car">Ok car</option>
@@ -28,16 +32,17 @@
     <label for="for-sale">For Sale: </label>
     <input type="checkbox" name="forSale"
     <%= car.forSale ? 'checked' : ""  %> id="for-sale"> 
-  <!-- <div> <%= car.forSale ? "For Sale" : "Not For Sale" %></div> -->
+
   <br>
   <label for="note-input">Share your experience with this car: </label>
-    <!-- <input type="text" name="driverNote"  id="note-input"> -->
+  <br>
     <textarea id="owner-review" type="text" name="driverNote" cols="30" rows="10"><%= car.driverNote %></textarea>
     <br>
-  <button  id="logout" type="submit">Submit</button>
+  <button  class="add-edit-car" type="submit">Submit</button>
 </div> 
 </form>
 
 </main>
+
 
 <%- include('../partials/footer') %>
