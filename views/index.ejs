@@ -3,7 +3,11 @@
 
 <main>
   <h1 class="animate__animated animate__fadeIn">Hello, <%= user ? user.profile.name : "driver!" %></h1>
+  <%if(user) {%>
+    <h2 class="animate__animated animate__fadeIn"> You can add your car and leave comments.</h2>
+  <% } else { %>
   <h2 class="animate__animated animate__fadeIn">Please login to add a car or leave comments.</h2>
+  <% }%>
 
 <% car.forEach(car => { %> 
   <div class="container">
