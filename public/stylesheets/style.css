@@ -210,6 +210,9 @@ border-radius: 5px;
 
 @media only screen and (max-width: 768px){
   
+  .top-left{
+    margin-left: 20px;
+  }
   .top-left.hide{
     display: none;
   }
@@ -231,6 +234,10 @@ border-radius: 5px;
 
   img.avatar{
     margin: 0 5px 0 5px;
+  }
+
+  nav{
+    justify-content: space-between;
   }
 
 
